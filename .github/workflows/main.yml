@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-python@v2
 
       - name: Build blocklist
-        run: sudo python generate-domains-blocklist.py > blocklist.txt
+        run: python generate-domains-blocklist.py > blocklist.txt
 
       - name: Upload generated Blocklist file
         uses: actions/upload-artifact@v2
