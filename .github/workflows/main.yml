@@ -21,6 +21,4 @@ jobs:
         run: python generate-domains-blocklist.py -o blocklist.txt
 
       - name: Checkout
-        git config user.name github-actions
-        git config user.email github-actions@github.com
         git push origin :data
