@@ -19,11 +19,6 @@ jobs:
 
       - name: Build blocklist
         run: sudo python generate-domains-blocklist.py -o blocklist.txt
-        git push origin :data
-        git checkout --orphan data
-        cp -rf /tmp/*.txt
-        git commit -m "blocklist generated"
-        git push origin data
 
       - name: Upload generated Blocklist file
         uses: actions/upload-artifact@v2
