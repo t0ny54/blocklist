@@ -19,7 +19,6 @@ jobs:
 
       - name: Build blocklist
         run: python generate-domains-blocklist.py > blocklist.txt
-        sudo cp -rf *.txt /tmp
     - name: Remove remote data branch
       if: ${{ success() }}
       run: |
