@@ -20,6 +20,14 @@ jobs:
       - name: Build blocklist
         run: sudo python generate-domains-blocklist.py -o blocklist.txt
 
+      - uses: actions/checkout@v2
+      - name: Commit report
+        run: |
+          git config --global user.name 'Your Name'
+          git config --global user.email 'your-username@users.noreply.github.com'
+          git commit -am "Automated report"
+          git push
+
       - name: Upload generated Blocklist file
         uses: actions/upload-artifact@v2
         with:
