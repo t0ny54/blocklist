@@ -20,11 +20,13 @@ jobs:
       - name: Build blocklist
         run: sudo python generate-domains-blocklist.py -o blocklist.txt
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: Commit report
         run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-username@users.noreply.github.com'
+          git config --global user.name 't0ny54'
+          git config --global user.email 't0ny54@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git checkout "${GITHUB_REF:11}"
           git commit -am "Automated report"
           git push
 
