@@ -19,12 +19,7 @@ jobs:
 
       - name: Build blocklist
         run: python generate-domains-blocklist.py > blocklist.txt  
-        git add .
-        git commit -m "blocklist generated"
-        git push origin data
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git push origin :data
         
-      - name: Upload generated Blocklist file
-        uses: actions/upload-artifact@v2
-        with:
-          name: blocklist
-          path: blocklist.txt
