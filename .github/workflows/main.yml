@@ -19,7 +19,17 @@ jobs:
 
       - name: Build blocklist
         run: python generate-domains-blocklist.py > blocklist.txt
-
+        
+- name: Add files
+      if: ${{ success() }}
+      run: |
+        git add .
+    - name: Commit Push
+      if: ${{ success() }}
+      run: |
+        git commit -m "blocklist generated"
+        git push origin data
+        
       - name: Upload generated Blocklist file
         uses: actions/upload-artifact@v2
         with:
