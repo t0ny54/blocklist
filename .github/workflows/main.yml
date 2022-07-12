@@ -20,5 +20,3 @@ jobs:
       - name: Build blocklist
         run: python generate-domains-blocklist.py -o blocklist.txt
 
-      - name: Checkout
-        git push origin :data
