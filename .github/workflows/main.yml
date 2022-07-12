@@ -8,7 +8,7 @@ on:
     - cron: '30 1 * * *'
 
 jobs:
-  build-blocklist:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
