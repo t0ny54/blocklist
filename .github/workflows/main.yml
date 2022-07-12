@@ -8,7 +8,7 @@ on:
     - cron: '30 1 * * *'
 
 jobs:
-  build-blocklist:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,8 +17,9 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
 
-      - name: Build blocklist
+      - name: build
         run: sudo python generate-domains-blocklist.py > blocklist.txt
+        
     - name: Remove remote data branch
       if: ${{ success() }}
       run: |
@@ -40,3 +41,5 @@ jobs:
       run: |
         git commit -m "blocklist generated"
         git push origin data
+      
+      
