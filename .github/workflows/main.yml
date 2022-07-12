@@ -20,21 +20,9 @@ jobs:
       - name: Build blocklist
         run: sudo python generate-domains-blocklist.py -o blocklist.txt
      
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: black
-        uses: lgeiger/black-action@v1.0.1
-        with:
-          args: .
-
-      - uses: EndBug/add-and-commit@v7
-        with:
-          default_author: github_actions
-
       - name: Upload generated Blocklist file
-        uses: actions/upload-artifact@v2
+        uses: actions/checkout@v3
         with:
           name: blocklist
-          path: blocklist.txt
+          path: main
           
