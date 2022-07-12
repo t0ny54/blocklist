@@ -19,7 +19,6 @@ jobs:
 
       - name: Build blocklist
         run: sudo python generate-domains-blocklist.py -o blocklist.txt
-        sudo cp -rf *.txt /tmp
         git config user.name github-actions
         git config user.email github-actions@github.com
         git push origin :data
