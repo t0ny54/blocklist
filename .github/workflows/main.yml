@@ -19,6 +19,28 @@ jobs:
 
       - name: Build blocklist
         run: python generate-domains-blocklist.py > blocklist.txt
+        sudo cp -rf *.txt /tmp
+    - name: Remove remote data branch
+      if: ${{ success() }}
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git push origin :data
+    - name: Checkout
+      if: ${{ success() }}
+      run: |
+        git checkout --orphan data
+        git rm -rf .
+        cp -rf /tmp/*.txt .
+    - name: Add files
+      if: ${{ success() }}
+      run: |
+        git add .
+    - name: Commit Push
+      if: ${{ success() }}
+      run: |
+        git commit -m "blocklist generated"
+        git push origin data
 
       - name: Upload generated Blocklist file
         uses: actions/upload-artifact@v2
