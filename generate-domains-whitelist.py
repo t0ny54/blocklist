@@ -101,4 +101,4 @@ def blacklists_from_config_file(file):
             print(name)
 
 
-blacklists_from_config_file(domains-whitelist.conf)
+blacklists_from_config_file(whitelist.conf)
