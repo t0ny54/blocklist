@@ -5,9 +5,9 @@ import sys
 import urllib
 
 
-def parse_whitelist(content, trusted=False):
+def parse_blacklist(content, trusted=False):
     rx_comment = re.compile(r'^(#|$)')
-    rx_inline_comment = re.compile(r'\s*#[^#].*$')
+    rx_inline_comment = re.compile(r'\s*#\s*[a-z0-9-].*$')
     rx_u = re.compile(r'^@*\|\|([a-z0-9.-]+[.][a-z]{2,})\^?(\$(popup|third-party))?$')
     rx_l = re.compile(r'^([a-z0-9.-]+[.][a-z]{2,})$')
     rx_h = re.compile(r'^[0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}[.][0-9]{1,3}\s+([a-z0-9.-]+[.][a-z]{2,})$')
@@ -33,7 +33,7 @@ def parse_whitelist(content, trusted=False):
     return names
 
 
-def whitelist_from_url(url):
+def blacklist_from_url(url):
     sys.stderr.write("Loading data from [{}]\n".format(url))
     req = urllib.Request(url)
     trusted = False
@@ -49,7 +49,7 @@ def whitelist_from_url(url):
         sys.stderr.write("[{}] returned HTTP code {}\n".format(url, response.getcode()))
         exit(1)
     content = response.read()
-    return parse_whitelist(content, trusted)
+    return parse_blacklist(content, trusted)
 
 
 def name_cmp(name):
@@ -68,8 +68,8 @@ def has_suffix(names, name):
     return False
 
 
-def whitelists_from_config_file(file):
-    whitelists = {}
+def blacklists_from_config_file(file):
+    blacklists = {}
     all_names = set()
     unique_names = set()
 
@@ -79,12 +79,12 @@ def whitelists_from_config_file(file):
             if str.startswith(line, "#") or line == "":
                 continue
             url = line
-            names = whitelist_from_url(url)
-            whitelists[url] = names
+            names = blacklist_from_url(url)
+            blacklists[url] = names
             all_names |= names
 
-    for url, names in whitelists.items():
-        print("\n\n########## Blacklist from {} ##########\n".format(url))
+    for url, names in blacklists.items():
+        print("\n\n########## Whitelist from {} ##########\n".format(url))
         ignored = 0
         list_names = list()
         for name in names:
@@ -105,4 +105,4 @@ conf = "domains-whitelist.conf"
 if len(sys.argv) > 1:
     conf = sys.argv[1]
 
-whitelists_from_config_file(conf)
+blacklists_from_config_file(conf)
