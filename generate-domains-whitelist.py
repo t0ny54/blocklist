@@ -101,8 +101,4 @@ def blacklists_from_config_file(file):
             print(name)
 
 
-conf = "domains-whitelist.conf"
-if len(sys.argv) > 1:
-    conf = sys.argv[1]
-
-blacklists_from_config_file(conf)
+blacklists_from_config_file(domains-whitelist.conf)
