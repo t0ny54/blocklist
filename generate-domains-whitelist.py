@@ -1,5 +1,7 @@
 #! /usr/bin/env python
 
+# run with python generate-domains-whitelist.py > list.txt.tmp && mv -f list.txt.tmp list
+
 import re
 import sys
 import urllib2
