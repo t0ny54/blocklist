@@ -36,7 +36,7 @@ def parse_blacklist(content, trusted=False):
 
 def blacklist_from_url(url):
     sys.stderr.write("Loading data from [{}]\n".format(url))
-    req = urllib.request(url)
+    req = urllib.urlopen(url)
     trusted = False
     if req.get_type() == "file":
         trusted = True
