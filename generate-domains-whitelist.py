@@ -3,7 +3,7 @@
 import re
 import sys
 import urllib
-import urllib.request as urllib
+import urllib.request
 
 
 def parse_blacklist(content, trusted=False):
@@ -36,7 +36,7 @@ def parse_blacklist(content, trusted=False):
 
 def blacklist_from_url(url):
     sys.stderr.write("Loading data from [{}]\n".format(url))
-    req = urllib.urlopen(url)
+    req = urllib.request.urlopen(url)
     trusted = False
     if req.get_type() == "file":
         trusted = True
