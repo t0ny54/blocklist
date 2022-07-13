@@ -1,6 +1,6 @@
 
 
-########## Blacklist from https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list ##########
+########## Whitelist from https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list ##########
 
 # Ignored duplicates: 383
 
@@ -550,7 +550,7 @@ theregister.co.uk
 gitcdn.xyz
 
 
-########## Blacklist from https://raw.githubusercontent.com/boutetnico/url-shorteners/master/list.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/boutetnico/url-shorteners/master/list.txt ##########
 
 # Ignored duplicates: 10
 
@@ -963,7 +963,7 @@ fxn.ws
 trkr.ws
 
 
-########## Blacklist from https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/hostnames.whitelist.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/hostnames.whitelist.txt ##########
 
 # Ignored duplicates: 744
 
@@ -1974,7 +1974,7 @@ serials.ws
 gumtree.co.za
 
 
-########## Blacklist from https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt ##########
 
 # Ignored duplicates: 7583
 
@@ -5209,7 +5209,7 @@ amazon.zone
 google.co.zw
 
 
-########## Blacklist from https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt ##########
 
 # Ignored duplicates: 224
 
@@ -5396,7 +5396,7 @@ naifei.shop
 pp.ua
 
 
-########## Blacklist from https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/referral-sites.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/referral-sites.txt ##########
 
 # Ignored duplicates: 44
 
@@ -5434,7 +5434,7 @@ qksrv.net
 go2jump.org
 
 
-########## Blacklist from https://raw.githubusercontent.com/nextdns/metadata/master/privacy/affiliate-tracking-domains ##########
+########## Whitelist from https://raw.githubusercontent.com/nextdns/metadata/master/privacy/affiliate-tracking-domains ##########
 
 # Ignored duplicates: 299
 
@@ -5570,7 +5570,7 @@ adservice.google.vn
 adservice.google.voto
 
 
-########## Blacklist from https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exclusions.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exclusions.txt ##########
 
 # Ignored duplicates: 136
 
@@ -5786,7 +5786,7 @@ onvix.tv
 trust.zone
 
 
-########## Blacklist from https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_domains.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_domains.txt ##########
 
 # Ignored duplicates: 2720
 
@@ -6492,7 +6492,7 @@ schd.ws
 pdf.yt
 
 
-########## Blacklist from https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDomainsAllowlist.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersDomainsAllowlist.txt ##########
 
 # Ignored duplicates: 6
 
@@ -6503,13 +6503,13 @@ annonser.gess.no
 ad.hem.no
 
 
-########## Blacklist from https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt ##########
 
 # Ignored duplicates: 191
 
 
 
-########## Blacklist from https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt ##########
+########## Whitelist from https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt ##########
 
 # Ignored duplicates: 137
 
