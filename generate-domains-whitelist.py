@@ -1,9 +1,8 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
 
 import re
 import sys
-import urllib
-import urllib.request
+import urllib2
 
 
 def parse_blacklist(content, trusted=False):
@@ -36,14 +35,14 @@ def parse_blacklist(content, trusted=False):
 
 def blacklist_from_url(url):
     sys.stderr.write("Loading data from [{}]\n".format(url))
-    req = urllib.request.urlopen(url)
+    req = urllib2.Request(url)
     trusted = False
     if req.get_type() == "file":
         trusted = True
     response = None
     try:
-        response = urllib.urlopen(req, timeout=10)
-    except urllib.URLError as err:
+        response = urllib2.urlopen(req, timeout=10)
+    except urllib2.URLError as err:
         sys.stderr.write("[{}] could not be loaded: {}\n".format(err))
         exit(1)
     if trusted is False and response.getcode() != 200:
