@@ -1,10 +1,8 @@
 #! /usr/bin/env python
 
-# run with python generate-domains-whitelist.py > list.txt.tmp && mv -f list.txt.tmp list
-
 import re
 import sys
-import urllib2
+import urllib
 
 
 def parse_whitelist(content, trusted=False):
@@ -37,14 +35,14 @@ def parse_whitelist(content, trusted=False):
 
 def whitelist_from_url(url):
     sys.stderr.write("Loading data from [{}]\n".format(url))
-    req = urllib2.Request(url)
+    req = urllib.Request(url)
     trusted = False
     if req.get_type() == "file":
         trusted = True
     response = None
     try:
-        response = urllib2.urlopen(req, timeout=10)
-    except urllib2.URLError as err:
+        response = urllib.urlopen(req, timeout=10)
+    except urllib.URLError as err:
         sys.stderr.write("[{}] could not be loaded: {}\n".format(err))
         exit(1)
     if trusted is False and response.getcode() != 200:
@@ -86,7 +84,7 @@ def whitelists_from_config_file(file):
             all_names |= names
 
     for url, names in whitelists.items():
-        print("\n\n########## Whitelist from {} ##########\n".format(url))
+        print("\n\n########## Blacklist from {} ##########\n".format(url))
         ignored = 0
         list_names = list()
         for name in names:
