@@ -84,7 +84,7 @@ def blacklists_from_config_file(file):
             all_names |= names
 
     for url, names in blacklists.items():
-        print("\n\n########## Blacklist from {} ##########\n".format(url))
+        print("\n\n########## Whitelist from {} ##########\n".format(url))
         ignored = 0
         list_names = list()
         for name in names:
