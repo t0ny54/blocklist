@@ -7,4 +7,3 @@
 
 # twitter.com       @work
 # facebook.com      @work
-# *.youtube.*       @time-to-sleep
