@@ -2,7 +2,16 @@ name: Update nxdomain
 
        # Controls when the workflow will run
 on:
-  # Triggers the workflow every 5 minutes
+  push:
+    paths-ignore:
+    - '.github/**'
+    - 'lists/**'
+    - '*.txt'
+    - '*.yaml'
+    - '*.conf'
+    - '*.txt'
+    - '*.sh'
+    - 'README.md'
   schedule:
     - cron: "0 0 * * *"
 
