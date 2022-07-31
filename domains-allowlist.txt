@@ -2304,7 +2304,7 @@ gumtree.co.za
 
 ########## Whitelist from https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt ##########
 
-# Ignored duplicates: 219
+# Ignored duplicates: 220
 
 api.cortana.ai
 upload.cc
