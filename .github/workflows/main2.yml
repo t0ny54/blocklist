@@ -3,6 +3,8 @@ name: Update Whitelist
        # Controls when the workflow will run
 on:
   push:
+  repository_dispatch:
+  workflow_dispatch:
     paths-ignore:
     - '.github/**'
     - 'lists/**'
